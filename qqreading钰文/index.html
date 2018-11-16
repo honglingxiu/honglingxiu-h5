@@ -1,0 +1,78 @@
+<!--
+	作者：舒钰文
+	时间：2018-11-06
+	描述：qq阅读运营下载页
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>qqreading</title>
+		<script type="text/javascript">
+			//腾讯
+			var _mtac = {
+				"senseQuery": 1
+			};
+			(function() {
+				var mta = document.createElement("script");
+				mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
+				mta.setAttribute("name", "MTAH5");
+				mta.setAttribute("sid", "500654889");
+				mta.setAttribute("cid", "500654890");
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(mta, s);
+			})();
+			//matomo
+			var _paq = _paq || [];
+			/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+			_paq.push(['trackPageView']);
+			_paq.push(['enableLinkTracking']);
+			(function() {
+				var u = "//tj.liulianglf.com/";
+				_paq.push(['setTrackerUrl', u + 'piwik.php']);
+				_paq.push(['setSiteId', '34']);
+				var d = document,
+					g = d.createElement('script'),
+					s = d.getElementsByTagName('script')[0];
+				g.type = 'text/javascript';
+				g.async = true;
+				g.defer = true;
+				g.src = u + 'piwik.js';
+				s.parentNode.insertBefore(g, s);
+			})();
+		</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<meta name="keywords" content="qq阅读下载" />
+		<!-- css -->
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+		<!--// css -->
+
+	</head>
+
+	<body>
+		<div class="background">
+			<div class="main">
+				<input id="tel" maxlength="11" placeholder="输入手机号，领阅读券" />
+				<div>
+					<button id="goAndGet">立即领取</button>
+				</div>
+			</div>
+		</div>
+		<!-- toast -->
+		<div id="m-toast-pop" class="m-toast-pop">
+			<div class="m-toast-inner">
+				<div class="m-toast-inner-text" id="m-toast-inner-text"></div>
+			</div>
+		</div>
+		<!-- toast -->
+		<!-- 微信端提示 -->
+		<div id="weixin-tip">
+			<p><img src="./images/live_weixin.jpg" alt="微信打开" /><span id="close" title="关闭" class="close">×</span></p>
+		</div>
+		<!-- 微信端提示 -->
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/index.js"></script>
+	</body>
+
+</html>

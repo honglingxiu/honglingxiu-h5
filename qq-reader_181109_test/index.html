@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0 ,minimum-scale=1.0,maximum-scale=1.0,user-scalable='no'">
+  <title>海量阅读，想读就读</title>
+  <script>
+    //rem自适应
+    (function (doc, win, undefined) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in win ? 'orientationchange' : 'resize',
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (clientWidth === undefined) return;
+          docEl.style.fontSize = 16 * (clientWidth / 320) + 'px';
+        };
+      if (doc.addEventListener === undefined) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false)
+    })(document, window);
+
+    //根据页面地址上报统计数据
+    var locationHref = window.location.href;
+    //var _paq = _paq || []; //matomo
+    //var _mtac = {}; //腾讯
+    var setSiteId = "36";
+    var sid = "500655612";
+    var cid = "500655613";
+    var siteList = [
+      {
+        url: "181109_a",
+        setSiteId: "36",
+        sid: "500655612",
+        txCid: "500655613"
+      }
+    ];
+    for (var i = 0; i < siteList.length; i++) {
+      if (locationHref.indexOf(siteList[0].url) > -1) {
+        setSiteId = siteList[i].setSiteId;
+        sid = siteList[i].sid;
+        cid = siteList[i].cid;
+        break;
+      }
+    }
+
+    //腾讯统计
+    var _mtac = {"senseQuery": 1};
+    (function () {
+      var mta = document.createElement("script");
+      mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
+      mta.setAttribute("name", "MTAH5");
+      mta.setAttribute("sid", sid);
+      mta.setAttribute("cid", cid);
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(mta, s);
+    })();
+    //matomo
+    var _paq = _paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function () {
+      var u = "//tj.liulianglf.com/";
+      _paq.push(['setTrackerUrl', u + 'piwik.php']);
+      _paq.push(['setSiteId', setSiteId]);
+      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+      g.type = 'text/javascript';
+      g.async = true;
+      g.defer = true;
+      g.src = u + 'piwik.js';
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+</head>
+<body>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+</body>
+</html>

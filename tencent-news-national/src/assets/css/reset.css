@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: PingFang SC,Helvetica,Arial;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color:#000000;
+}
+

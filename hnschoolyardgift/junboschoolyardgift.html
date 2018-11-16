@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,minimum-scale=1.0,maximum-scale=1.0,user-scalable='no'">
+    <link href="./schoolyardgift1/css/style.css" rel="stylesheet" type="text/css" />
+    <title>移动&淘宝，伴你进校园</title>
+    <script type="text/javascript">
+        //腾讯
+        var _mtac = {"performanceMonitor":1,"senseQuery":1};
+        (function() {
+            var mta = document.createElement("script");
+            mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
+            mta.setAttribute("name", "MTAH5");
+            mta.setAttribute("sid", "500631976");
+            mta.setAttribute("cid", "500631977");
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(mta, s);
+        })();
+
+        //matomo
+        var _paq = _paq || [];
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//tj.liulianglf.com/";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', '4']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+
+        //百度统计
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?68792036a9ec200a5939e6b27b8f4e12";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+
+        //rem自适应
+        (function (doc, win, undefined) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in win? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (clientWidth === undefined) return;
+                    docEl.style.fontSize = 16 * (clientWidth / 320) + 'px';
+                };
+            if (doc.addEventListener === undefined) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false)
+        })(document, window);
+
+        //确定、取消按钮点击事件
+        function hideDialog(flag) {
+            var dialogArr = document.querySelectorAll(".dialog");
+            switch (flag) {
+                case "normal":
+                    window.location.href = "https://t.asczwa.com/taobao?backurl=http://m.tb.cn/h.35p2e6j";//自动调起淘宝app
+                    dialogArr[0].style.display = "none";
+                    break;
+                /*case "weixin":
+                    dialogArr[1].style.display="none";*/
+                default:
+                    dialogArr[0].style.display = "none";
+                    dialogArr[1].style.display = "none";
+                    dialogArr[2].style.display = "none";
+                    break;
+            }
+        }
+        window.onload=function () {
+            if ('addEventListener' in document) {//300毫秒点击延迟问题
+                document.addEventListener('DOMContentLoaded', function() {
+                    FastClick.attach(document.body);
+                }, false);
+            }
+
+            var clipboard = new ClipboardJS('.btn');
+            var dialogArr = document.querySelectorAll(".dialog");
+            var ua = window.navigator.userAgent.toLowerCase();
+            var clipboard = new ClipboardJS('.btn');
+            clipboard.on('success', function(){
+                if (/micromessenger/.test(ua)||(/QQ/i).test(ua)) {
+                    //若是微信则显示微信的提示弹框或QQ软件中打开
+                    //this.popupVisible=true;
+                    dialogArr[1].style.display = "block";
+                }
+                else {
+                    //若是普通浏览器则显示普通浏览器的提示弹框
+                    dialogArr[0].style.display = "block";
+                }
+            });
+            clipboard.on('error', function(){
+                dialogArr[2].style.display = "block";
+            });
+            var btn=document.getElementById("btn");
+            btn.onclick=function () {
+                MtaH5.clickStat("clicking_copy");
+                _paq.push(["trackEvent", "点击复制淘口令按钮", "点击事件跟踪"]);
+                _hmt.push(['_trackEvent', 'click', '复制淘口令按钮', '-']);
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="header">
+    <img src="./schoolyardgift1/images/1-1.jpg" alt="">
+    <div class="time"><span>活动时间：2018年8月5日一9月30日</span></div>
+    <img src="./schoolyardgift1/images/1-2.jpg" alt="">
+    <div class="taobao">
+        <!--<div class="inform">
+            <div class="message" id="message"></div>
+        </div>-->
+        <div class="tips">点击复制淘口令，下载安装淘宝APP，打开淘宝APP即可领取</div>
+        <div class="taobao-word">
+        <span >【淘宝新人福利，最高领288元大礼包】http://m.tb.cn/h.35gXLmd 点击链接，再选择浏览器咑閞；或復·制这段描述€Ww3zbeXMJ7S€后咑閞👉淘♂寳♀👈</span>
+        </div>
+        <div class="btn" id="btn" data-clipboard-text="【淘宝新人福利，最高领288元大礼包】http://m.tb.cn/h.35gXLmd 点击链接，再选择浏览器咑閞；或復·制这段描述€Ww3zbeXMJ7S€后咑閞👉淘♂寳♀👈">点击复制淘口令</div>
+    </div>
+</div>
+<div class="center">
+    <img src="./schoolyardgift1/images/2.jpg" alt="">
+</div>
+<div class="bottom">
+    <div class="sweet"><img src="./schoolyardgift1/images/3.png" alt=""></div>
+    <div class="desc">
+        <ul>
+            <li><span>1</span>领取了广东移动指定新生号卡的用户有机会获得价值最高288元的礼包。其中包括：10元现金红包、20元支付宝红包、天猫超市券、淘票票代金券、淘宝心选优惠券、飞猪券、话费券、流量券等，以上权益随机发放，各权益的数量、有效期及更多详情请登录“手机淘宝-我的淘宝-红包卡券”进行查看。</li>
+            <li><span>2</span>各权益存在使用有效期，领用后请尽快使用，避免过期。</li>
+            <li><span>3</span>如领取过程中遇到问题，可联系客服咨询，电话：4008-168-562</li>
+        </ul>
+    </div>
+</div>
+<div class="logo">
+    <img src="./schoolyardgift1/images/logo.png" alt="">
+</div>
+<!--对话框-->
+<div class="dialog">
+    <div class="dia-content">
+        <p class="cmd-header cmd-success">口令复制成功</p><!--普通浏览器-->
+        <p class="text">打开淘宝APP即可领取礼包</p>
+        <p class="btn">
+            <button onclick="hideDialog('normal')">确定</button>
+            <!--<button onclick="hideDialog('default')" class="cancel">取消</button>-->
+        </p>
+        <button class="dia-close" onclick="hideDialog('default')"></button>
+    </div>
+</div>
+<div class="dialog">
+    <div class="dia-content">
+        <p class="cmd-header cmd-success">口令复制成功</p><!--微信-->
+        <p class="text">打开淘宝APP即可领取礼包</p>
+        <p class="btn">
+            <button onclick="hideDialog('weixin')">确定</button>
+        </p>
+        <button class="dia-close" onclick="hideDialog('default')"></button>
+    </div>
+</div>
+<div class="dialog">
+    <div class="dia-content special">
+        <p class="cmd-header cmd-fail">自动复制失败</p>
+        <p class="fail-text special">请长按淘口令进行复制</p>
+        <p class="fail-text">打开淘宝APP即可领取礼包</p>
+        <p class="btn">
+            <button class="btn-success" onclick="hideDialog('default')">确定</button>
+        </p>
+        <button class="dia-close" onclick="hideDialog('default')"></button>
+    </div>
+</div>
+<!--对话框-->
+</body>
+<script src="./schoolyardgift1/js/clipboard.min.js"></script>
+<script src="./schoolyardgift1/js/fastclick.js" type="application/javascript"></script>
+</html>

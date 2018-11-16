@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>document</title>
+  <style type="text/css">
+    .one{
+      width: 250px;
+      height: 250px;
+      background-color: pink;
+    }
+  </style>
+  <script type="text/javascript">
+
+    window.onload = function () {
+      var one=document.querySelector("#one");
+      one.onclick=function () {
+        console.log("one");
+      }
+      var starX=0;
+      var moveX=0;
+      one.addEventListener("touchstart",function (event) {
+        console.log("touchstart");
+        //console.log(event.touches);
+        starX=event.touches[0].clientX;
+      })
+      one.addEventListener("touchstart",function (event) {
+        console.log("touchstart2");
+        //console.log(event.touches);
+        starX=event.touches[0].clientX;
+      })
+      one.addEventListener("touchmove",function (event) {
+        console.log("touchmove");
+        //console.log(event.touches);
+        moveX=event.touches[0].clientX-starX;
+      })
+      one.addEventListener("touchend",function (event) {
+        console.log("touchend");
+        console.log(moveX);
+        //console.log(event.touches);
+      })
+    }
+  </script>
+</head>
+<body>
+<div class="one" id="one">
+
+</div>
+</body>
+</html>

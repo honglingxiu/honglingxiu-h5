@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0 ,minimum-scale=1.0,maximum-scale=1.0,user-scalable='no'">
+    <link href="./css/style.css" rel="stylesheet" type="text/css"/>
+    <title>淘宝新人福利188元大礼包</title>
+    <script type="text/javascript">
+        //腾讯
+        var _mtac = {"performanceMonitor": 1, "senseQuery": 1};
+        (function () {
+            var mta = document.createElement("script");
+            mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
+            mta.setAttribute("name", "MTAH5");
+            mta.setAttribute("sid", "500647912");
+            mta.setAttribute("cid", "500647913");
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(mta, s);
+        })();
+
+        //matomo
+        var _paq = _paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function () {
+            var u = "//tj.liulianglf.com/";
+            _paq.push(['setTrackerUrl', u + 'piwik.php']);
+            _paq.push(['setSiteId', '24']);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.type = 'text/javascript';
+            g.async = true;
+            g.defer = true;
+            g.src = u + 'piwik.js';
+            s.parentNode.insertBefore(g, s);
+        })();
+        //百度
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?7c668ad2d8a702e04506a197937a365b";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+
+        //rem自适应
+        (function (doc, win, undefined) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in win ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (clientWidth === undefined) return;
+                    docEl.style.fontSize = 16 * (clientWidth / 320) + 'px';
+                };
+            if (doc.addEventListener === undefined) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false)
+        })(document, window);
+
+        //确定、取消按钮点击事件
+        function hideDialog(flag) {
+            var dialogArr = document.querySelectorAll(".dialog");
+            switch (flag) {
+                case "normal":
+                    window.location.href = "https://t.asczwa.com/taobao?backurl=https://mos.m.taobao.com/activity_newer?from=alitx&sight=cellstar&pid=mm_26632546_42564384_16697500454&ut_sk=1.utdid_null_1538114575256.TaoPassword-Outside.taoketop&sp_tk=77+lT1lFTWJmSDhNY0vvv6U=&spm=a211b4.24894679&visa=13a09278fde22a2e&disablePopup=true&disableSJ=1";//自动调起淘宝app
+                    dialogArr[0].style.display = "none";
+                    break;
+                /*case "weixin":
+                    dialogArr[1].style.display="none";*/
+                default:
+                    dialogArr[0].style.display = "none";
+                    dialogArr[1].style.display = "none";
+                    dialogArr[2].style.display = "none";
+                    break;
+            }
+        }
+
+        window.onload = function () {
+            if ('addEventListener' in document) {
+                document.addEventListener('DOMContentLoaded', function () {
+                    FastClick.attach(document.body);
+                }, false);//300毫秒点击延迟问题
+            }
+            var clipboard = new ClipboardJS('.btn');
+            var dialogArr = document.querySelectorAll(".dialog");
+            var ua = window.navigator.userAgent.toLowerCase();
+            clipboard.on('success', function () {
+                if (/micromessenger/.test(ua) || (/QQ/i).test(ua)) {
+                    //若是微信则显示微信的提示弹框或QQ软件中打开
+                    //this.popupVisible=true;
+                    dialogArr[1].style.display = "block";
+                }
+                else {
+                    //若是普通浏览器则显示普通浏览器的提示弹框
+                    dialogArr[0].style.display = "block";
+                }
+            });
+            clipboard.on('error', function () {
+                dialogArr[2].style.display = "block";
+            });
+            var btn = document.getElementById("btn");
+            btn.onclick = function () {
+                MtaH5.clickStat("clicking_copy");
+                _paq.push(["trackEvent", "点击复制淘口令按钮", "点击事件跟踪"]);
+                _hmt.push(['_trackEvent', 'click', '复制淘口令按钮', '-']);
+            }
+        }
+    </script>
+</head>
+<body>
+<img src="./images/1-3.jpg" alt="" class="main-img">
+<div class="center">
+    <img src="./images/bg.jpg" alt="" class="center-img">
+    <div class="con-taobao">
+        <div class="tips">点击复制淘口令，下载安装淘宝APP，打开淘宝APP即可领取</div>
+        <div class="taobao-word">
+            <span>【淘宝新人福利，最高领188元大礼包】http://dwz.cn/vxrYeyJp 点击链接，再选择浏览器咑閞；或復·制这段描述￥Ja3Pb7OsCiW￥后咑閞淘♂寳♀</span>
+        </div>
+        <div class="btn-wrapper">
+            <img src="./images/btn2.png" alt="" class="btn" id="btn" data-clipboard-text="【淘宝新人福利，最高领188元大礼包】http://dwz.cn/vxrYeyJp 点击链接，再选择浏览器咑閞；或復·制这段描述￥Ja3Pb7OsCiW￥后咑閞淘♂寳♀">
+        </div>
+    </div>
+</div>
+<div class="bottom">
+    <img src="./images/3.jpg" class="bottom-img" alt="">
+</div>
+<div class="logo">
+    <img src="./images/4.jpg" alt="">
+</div>
+<!--对话框-->
+<div class="dialog">
+    <div class="dia-content">
+        <p class="cmd-header cmd-success">口令复制成功</p><!--普通浏览器-->
+        <p class="text">打开淘宝APP即可领取礼包</p>
+        <p class="btn">
+            <button onclick="hideDialog('normal')">确定</button>
+            <!--<button onclick="hideDialog('default')" class="cancel">取消</button>-->
+        </p>
+        <button class="dia-close" onclick="hideDialog('default')"></button>
+    </div>
+</div>
+<div class="dialog">
+    <div class="dia-content">
+        <p class="cmd-header cmd-success">口令复制成功</p><!--微信-->
+        <p class="text">打开淘宝APP即可领取礼包</p>
+        <p class="btn">
+            <button onclick="hideDialog('weixin')">确定</button>
+        </p>
+        <button class="dia-close" onclick="hideDialog('default')"></button>
+    </div>
+</div>
+<div class="dialog">
+    <div class="dia-content special">
+        <p class="cmd-header cmd-fail">自动复制失败</p>
+        <p class="fail-text special">请长按淘口令进行复制</p>
+        <p class="fail-text">打开淘宝APP即可领取礼包</p>
+        <p class="btn">
+            <button class="btn-success" onclick="hideDialog('default')">确定</button>
+        </p>
+        <button class="dia-close" onclick="hideDialog('default')"></button>
+    </div>
+</div>
+<!--对话框-->
+</body>
+<script src="./js/clipboard.min.js"></script>
+<script src="./js/fastclick.js" type="application/javascript"></script>
+</html>

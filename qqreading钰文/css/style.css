@@ -1,0 +1,502 @@
+@charset "utf-8";
+
+/*!
+ * reset
+ * @功能：1、重设浏览器默认样式
+ *       2、设置通用原子类
+ */
+
+
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+
+html {
+	background: white;
+	color: black;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	margin: 0;
+	padding: 0;
+}
+
+
+/* 要注意表单元素并不继承父级 font 的问题 */
+
+input,
+select,
+textarea {
+	font-size: 100%;
+}
+
+input::-webkit-input-placeholder {
+	/* placeholder颜色  */
+	color: #aeafb1;
+	/* placeholder位置  */
+	text-align: center;
+}
+
+input:focus::-webkit-input-placeholder {
+	text-indent: -999em;
+	z-index: -20;
+}
+
+
+/* 去掉 table cell 的边距并让其边重合 */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ie bug：th 不继承 text-align */
+
+th {
+	text-align: inherit;
+}
+
+
+/* 去除默认边框 */
+
+fieldset,
+img {
+	border: none;
+}
+
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+
+iframe {
+	display: block;
+}
+
+
+/* 去掉 firefox 下此元素的边框 */
+
+abbr,
+acronym {
+	border: none;
+	font-variant: normal;
+}
+
+
+/* 一致的 del 样式 */
+
+del {
+	text-decoration: line-through;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+	font-style: normal;
+	font-weight: 500;
+}
+
+
+/* 去掉列表前的标识，li 会继承 */
+
+ol,
+ul {
+	list-style: none;
+}
+
+
+/* 对齐是排版最重要的因素，别让什么都居中 */
+
+caption,
+th {
+	text-align: left;
+}
+
+
+/* 来自yahoo，让标题都自定义，适应多个系统应用 */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: 500;
+}
+
+q:before,
+q:after {
+	content: '';
+}
+
+
+/* 统一上标和下标 */
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+
+/* 让链接在 hover 状态下显示下划线 */
+
+a:hover {
+	text-decoration: underline;
+}
+
+
+/* 默认不显示下划线，保持页面简洁 */
+
+ins,
+a {
+	text-decoration: none;
+}
+
+
+/* 去除 ie6 & ie7 焦点点状线 */
+
+a:focus,
+*:focus {
+	outline: none;
+}
+
+
+/* 清除浮动 */
+
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+	overflow: hidden;
+}
+
+.clearfix {
+	zoom: 1;
+	/* for ie6 & ie7 */
+}
+
+.clear {
+	clear: both;
+	display: block;
+	font-size: 0;
+	height: 0;
+	line-height: 0;
+	overflow: hidden;
+}
+
+
+/* 设置显示和隐藏，通常用来与 js 配合 */
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+
+/* 设置浮动，减少浮动带来的 bug */
+
+.fl,
+.fr {
+	display: inline;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+
+/*-- reset --*/
+
+.background {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url(../images/background1.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.background-download {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url(../images/background.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.download {
+	position: absolute;
+	bottom: 30%;
+	width: 100%;
+}
+
+.download button {
+	background-color: white;
+	width: 65%;
+	height: 55px;
+	border: none;
+	border-radius: 5px;
+	color: #1a54a6;
+	font-size: 33px;
+	line-height: 55px;
+	font-weight: bolder;
+}
+
+.main {
+	position: absolute;
+	top: 80%;
+	width: 100%;
+}
+
+.main button {
+	background-color: #fce820;
+	width: 60%;
+	height: 40px;
+	border: none;
+	border-radius: 5px;
+	color: black;
+	font-size: 22px;
+	line-height: 40px;
+	font-weight: bolder;
+}
+
+.main input {
+	width: 60%;
+	height: 50px;
+	border-radius: 5px;
+	margin-bottom: 15px;
+	border: none;
+	font-size: 20px;
+	font-weight: bolder;
+	color: black;
+	text-align: center;
+	line-height: 50px;
+	-moz-box-shadow: 0px 3px 5px #999 inset;
+	/* For Firefox3.6+ */
+	-webkit-box-shadow: 0px 3px 5px #999 inset;
+	/* For Chrome5+, Safari5+ */
+	box-shadow: 0px 3px 5px #999 inset;
+	/* For Latest Opera */
+}
+
+
+/*toast弹出层*/
+
+.m-toast-pop {
+	display: none;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	overflow: auto;
+	text-align: center;
+}
+
+.m-toast-inner {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 100%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.m-toast-inner-text {
+	display: inline-block;
+	margin: 0 22px;
+	padding: 19px 21px;
+	font-size: 16px;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	line-height: 22px;
+	background: rgba(0, 0, 0, 0.72);
+	border-radius: 10px;
+}
+
+
+/*toast弹出层*/
+
+
+/*微信提示*/
+
+#weixin-tip {
+	display: none;
+	left: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.8);
+	filter: alpha(opacity=80);
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	position: fixed;
+}
+
+#weixin-tip p {
+	text-align: center;
+	margin-top: 10%;
+	padding: 0 5%;
+}
+
+#weixin-tip .close {
+	color: #fff;
+	padding: 5px;
+	font: bold 20px/20px simsun;
+	text-shadow: 0 1px 0 #ddd;
+	top: 0;
+	left: 5%;
+}
+
+
+/*微信提示*/
+
+@media only screen and (max-width: 320px) {
+	html {
+		font-size: 16px;
+	}
+	.main {
+		bottom: 20px;
+	}
+	.main input {
+		height: 40px;
+		font-size: 17px;
+	}
+}
+
+@media only screen and (width: 360px) {
+	html {
+		font-size: 18px;
+	}
+}
+
+@media only screen and (width: 375px) {
+	html {
+		font-size: 18.75px;
+	}
+}
+
+@media only screen and (width: 400px) {
+	html {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (width: 412px) {
+	html {
+		font-size: 20.6px;
+	}
+}
+
+@media only screen and (width: 414px) {
+	html {
+		font-size: 20.7px;
+	}
+}
+
+@media only screen and (min-width: 640px) {
+	html {
+		font-size: 32px;
+	}
+}
+
+@media only screen and (min-width: 640px) {
+	.main {
+		bottom: 65px;
+	}
+	.main button {
+		height: 60px;
+	}
+	.main input {
+		height: 60px;
+	}
+}
+
+@media only screen and (width: 1024px) {
+	.main {
+		bottom: 90px;
+	}
+	.main button {
+		height: 80px;
+		font-size: 40px;
+	}
+	.main input {
+		height: 80px;
+		font-size: 40px;
+	}
+}

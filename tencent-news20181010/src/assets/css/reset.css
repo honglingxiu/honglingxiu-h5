@@ -1,0 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #EFEFEF;
+}
+li{
+  list-style: none;
+}
+button{
+  outline: none;
+  border :none;
+  -webkit-appearance:none;
+  resize: none;
+}

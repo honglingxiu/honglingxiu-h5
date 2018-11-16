@@ -1,0 +1,13 @@
+body,ul,li,p,h1{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+*{
+  box-sizing: border-box;
+}
+body{
+  background-color: #EFF5F7;
+}
